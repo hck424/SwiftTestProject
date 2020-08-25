@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jmL-XS-CId">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pie Chart View Controller-->
+        <scene sceneID="RAw-u9-BMu">
+            <objects>
+                <viewController storyboardIdentifier="PieChartViewController" id="jmL-XS-CId" customClass="PieChartViewController" customModule="SwiftTestProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F1F-NT-OrO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KgE-6C-Hwh" customClass="PieChartView" customModule="SwiftTestProject" customModuleProvider="target">
+                                <rect key="frame" x="41.5" y="144" width="331" height="331"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="KgE-6C-Hwh" secondAttribute="height" multiplier="1:1" id="1gw-wn-IFc"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QdE-Th-F0o">
+                                <rect key="frame" x="41.5" y="575" width="331" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YwA-Mf-fo5">
+                                        <rect key="frame" x="0.0" y="0.0" width="163" height="45"/>
+                                        <color key="backgroundColor" red="0.1278669536" green="0.76028358939999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Start"/>
+                                        <connections>
+                                            <action selector="clickedActionStart:" destination="jmL-XS-CId" eventType="touchUpInside" id="DFH-Ss-b7m"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASF-JQ-exV">
+                                        <rect key="frame" x="168" y="0.0" width="163" height="45"/>
+                                        <color key="backgroundColor" red="0.7843137255" green="0.078431372550000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Stop"/>
+                                        <connections>
+                                            <action selector="clickedActionStop:" destination="jmL-XS-CId" eventType="touchUpInside" id="pF9-K8-EN5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="wSh-y6-4vo"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KgE-6C-Hwh" firstAttribute="top" secondItem="H3x-H7-P5Z" secondAttribute="top" constant="100" id="08R-mL-4SM"/>
+                            <constraint firstItem="KgE-6C-Hwh" firstAttribute="centerX" secondItem="H3x-H7-P5Z" secondAttribute="centerX" id="KLd-lE-3bE"/>
+                            <constraint firstItem="KgE-6C-Hwh" firstAttribute="width" secondItem="F1F-NT-OrO" secondAttribute="width" multiplier="0.8" id="gVA-Tl-dNM"/>
+                            <constraint firstItem="QdE-Th-F0o" firstAttribute="width" secondItem="KgE-6C-Hwh" secondAttribute="width" id="hPq-9S-fno"/>
+                            <constraint firstItem="QdE-Th-F0o" firstAttribute="top" secondItem="KgE-6C-Hwh" secondAttribute="bottom" constant="100" id="k56-G9-qbp"/>
+                            <constraint firstItem="QdE-Th-F0o" firstAttribute="centerX" secondItem="KgE-6C-Hwh" secondAttribute="centerX" id="tbi-nl-1Jz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="H3x-H7-P5Z"/>
+                    </view>
+                    <connections>
+                        <outlet property="chartView" destination="KgE-6C-Hwh" id="NnS-px-Pp1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kkX-Z9-Bst" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="448" y="-135"/>
+        </scene>
+    </scenes>
+</document>

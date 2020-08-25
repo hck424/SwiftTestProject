@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>668538335631-ruhrpq52khb3jmptvpouqaa6an261rtv.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.668538335631-ruhrpq52khb3jmptvpouqaa6an261rtv</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDmVPxt4U1ysOvx7UNWuMC2SCsP87_Z9FA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>668538335631</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>kr.Sangchang.SwiftTestProject</string>
+	<key>PROJECT_ID</key>
+	<string>swifttestproject-6cf34</string>
+	<key>STORAGE_BUCKET</key>
+	<string>swifttestproject-6cf34.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:668538335631:ios:736f449e0e4fbc3c569bfa</string>
+	<key>DATABASE_URL</key>
+	<string>https://swifttestproject-6cf34.firebaseio.com</string>
+</dict>
+</plist>

@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b7l-iJ-GC7">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Social Login View Controller-->
+        <scene sceneID="Jq1-h6-LTK">
+            <objects>
+                <viewController storyboardIdentifier="SocialLoginViewController" id="b7l-iJ-GC7" customClass="SocialLoginViewController" customModule="SwiftTestProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HLl-zV-V8o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q3W-b9-AtM">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Lny-0p-3Gl">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="404"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Z5R-EJ-N61">
+                                                <rect key="frame" x="20" y="100" width="374" height="43.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uxu-Nz-6EJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="177" height="43.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="Uxu-Nz-6EJ" secondAttribute="height" multiplier="183:45" id="alk-OP-MUL"/>
+                                                        </constraints>
+                                                        <state key="normal" image="kakao_login_medium_narrow"/>
+                                                        <connections>
+                                                            <action selector="onClickedButtonActions:" destination="b7l-iJ-GC7" eventType="touchUpInside" id="etc-WC-d9A"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ME-JM-C4S" customClass="CButton" customModule="SwiftTestProject" customModuleProvider="target">
+                                                        <rect key="frame" x="197" y="0.0" width="177" height="43.5"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <state key="normal" title="Kakao 로그아웃">
+                                                            <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.99655181169999996" green="0.91129487750000004" blue="0.00016445475920000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="onClickedButtonActions:" destination="b7l-iJ-GC7" eventType="touchUpInside" id="N1X-h3-9hu"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eu5-Lb-xgc">
+                                                <rect key="frame" x="20" y="163.5" width="374" height="43.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwH-7L-1T0" customClass="CButton" customModule="SwiftTestProject" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="177" height="43.5"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="cwH-7L-1T0" secondAttribute="height" multiplier="183:45" id="5SV-tK-3ca"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                                        <inset key="contentEdgeInsets" minX="0.0" minY="8" maxX="0.0" maxY="8"/>
+                                                        <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        <state key="normal" title="로그인" image="login_naverapp_logo">
+                                                            <color key="titleColor" red="0.1278669536" green="0.76028358939999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.1278669536" green="0.76028358939999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="onClickedButtonActions:" destination="b7l-iJ-GC7" eventType="touchUpInside" id="fIK-C6-0TJ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ej6-fM-S5u" customClass="CButton" customModule="SwiftTestProject" customModuleProvider="target">
+                                                        <rect key="frame" x="197" y="0.0" width="177" height="43.5"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <state key="normal" title="Naver 로그아웃">
+                                                            <color key="titleColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.1278669536" green="0.76028358939999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="onClickedButtonActions:" destination="b7l-iJ-GC7" eventType="touchUpInside" id="6uk-wR-4xR"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RyW-N9-3p9">
+                                                <rect key="frame" x="20" y="227" width="374" height="43.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfD-WH-t3F" customClass="CButton" customModule="SwiftTestProject" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="177" height="43.5"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="rfD-WH-t3F" secondAttribute="height" multiplier="183:45" id="tQW-Ek-bo1"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                                        <inset key="contentEdgeInsets" minX="0.0" minY="8" maxX="0.0" maxY="8"/>
+                                                        <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        <state key="normal" title="로그인" image="google">
+                                                            <color key="titleColor" red="0.78431372549019607" green="0.078431372549019607" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.78431372549019607" green="0.078431372549019607" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="onClickedButtonActions:" destination="b7l-iJ-GC7" eventType="touchUpInside" id="hLn-al-jcR"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1g-3R-Gru" customClass="CButton" customModule="SwiftTestProject" customModuleProvider="target">
+                                                        <rect key="frame" x="197" y="0.0" width="177" height="43.5"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <state key="normal" title="Google 로그아웃">
+                                                            <color key="titleColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.78431372549019607" green="0.078431372549019607" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="onClickedButtonActions:" destination="b7l-iJ-GC7" eventType="touchUpInside" id="1x4-No-1Wt"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eIF-yd-uee">
+                                                <rect key="frame" x="20" y="290.5" width="374" height="43.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Uk-7N-4bO" customClass="CButton" customModule="SwiftTestProject" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="177" height="43.5"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="2Uk-7N-4bO" secondAttribute="height" multiplier="183:45" id="6Hb-jt-Km3"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                                        <inset key="contentEdgeInsets" minX="0.0" minY="8" maxX="0.0" maxY="8"/>
+                                                        <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        <state key="normal" title="로그인" image="facebook">
+                                                            <color key="titleColor" red="0.3032125235" green="0.41991937159999998" blue="0.66578823330000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.30196078431372547" green="0.41960784313725491" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="onClickedButtonActions:" destination="b7l-iJ-GC7" eventType="touchUpInside" id="y8d-fz-88n"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xhO-2o-N4s" customClass="CButton" customModule="SwiftTestProject" customModuleProvider="target">
+                                                        <rect key="frame" x="197" y="0.0" width="177" height="43.5"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <state key="normal" title="FaceBook 로그아웃">
+                                                            <color key="titleColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.30196078431372547" green="0.41960784313725491" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="onClickedButtonActions:" destination="b7l-iJ-GC7" eventType="touchUpInside" id="twM-3S-ugw"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="K0b-LX-UsZ">
+                                                <rect key="frame" x="20" y="354" width="374" height="50"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PfM-Az-iSH">
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="8iy-Ez-ujE"/>
+                                                            <constraint firstAttribute="width" secondItem="PfM-Az-iSH" secondAttribute="height" multiplier="1:1" id="bMQ-xg-XBu"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0E-JY-c4j">
+                                                        <rect key="frame" x="60" y="17" width="314" height="16"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <edgeInsets key="layoutMargins" top="100" left="20" bottom="0.0" right="20"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Lny-0p-3Gl" firstAttribute="width" secondItem="Q3W-b9-AtM" secondAttribute="width" id="RDz-tn-rBE"/>
+                                    <constraint firstItem="Lny-0p-3Gl" firstAttribute="height" secondItem="Q3W-b9-AtM" secondAttribute="height" priority="1" id="Yvg-YB-YAo"/>
+                                    <constraint firstItem="Lny-0p-3Gl" firstAttribute="top" secondItem="Q3W-b9-AtM" secondAttribute="top" id="dyw-LW-xOy"/>
+                                    <constraint firstAttribute="bottom" secondItem="Lny-0p-3Gl" secondAttribute="bottom" priority="1" id="ezU-Pw-f89"/>
+                                    <constraint firstItem="Lny-0p-3Gl" firstAttribute="leading" secondItem="Q3W-b9-AtM" secondAttribute="leading" id="jGm-kC-ZG4"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lny-0p-3Gl" secondAttribute="trailing" id="yJ3-H6-BjB"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Q3W-b9-AtM" firstAttribute="leading" secondItem="aXD-2D-fQo" secondAttribute="leading" id="O4o-pj-WfP"/>
+                            <constraint firstItem="aXD-2D-fQo" firstAttribute="trailing" secondItem="Q3W-b9-AtM" secondAttribute="trailing" id="bMu-Es-8ly"/>
+                            <constraint firstItem="aXD-2D-fQo" firstAttribute="bottom" secondItem="Q3W-b9-AtM" secondAttribute="bottom" id="jSz-wf-PZe"/>
+                            <constraint firstItem="Q3W-b9-AtM" firstAttribute="top" secondItem="aXD-2D-fQo" secondAttribute="top" id="xDB-Za-RPH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aXD-2D-fQo"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnFBLogOut" destination="xhO-2o-N4s" id="fsX-AU-Std"/>
+                        <outlet property="btnFBLogin" destination="2Uk-7N-4bO" id="fcw-rP-cAc"/>
+                        <outlet property="btnGoogleLogin" destination="rfD-WH-t3F" id="Pdb-0y-Ryj"/>
+                        <outlet property="btnGoogleLogout" destination="w1g-3R-Gru" id="DxB-ra-oab"/>
+                        <outlet property="btnKakaoIn" destination="Uxu-Nz-6EJ" id="3wp-mF-xks"/>
+                        <outlet property="btnKakaoLogOut" destination="7ME-JM-C4S" id="BoS-15-rFe"/>
+                        <outlet property="btnNaverLogOut" destination="ej6-fM-S5u" id="9bt-Oj-6uk"/>
+                        <outlet property="btnNaverLogin" destination="cwH-7L-1T0" id="QIy-dM-0jy"/>
+                        <outlet property="ivProfile" destination="PfM-Az-iSH" id="sO5-HZ-9sF"/>
+                        <outlet property="lbUserInfo" destination="m0E-JY-c4j" id="cJg-KP-vGy"/>
+                        <outlet property="svUserInfo" destination="K0b-LX-UsZ" id="GWx-LW-h4T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JHD-OD-jO6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="426" y="-123"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="facebook" width="32" height="32"/>
+        <image name="google" width="32" height="32"/>
+        <image name="kakao_login_medium_narrow" width="91.5" height="22.5"/>
+        <image name="login_naverapp_logo" width="21" height="21"/>
+    </resources>
+</document>
