@@ -9,10 +9,12 @@
 import UIKit
 
 class PieChartViewController: UIViewController {
-
+    
     @IBOutlet weak var chartView: PieChartView!
-    var animating: Bool = false
-    var timer: Timer?
+    var saveAngle: Double = 0.0
+    
+    var canSpin = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.layoutIfNeeded()
@@ -23,7 +25,6 @@ class PieChartViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        NotificationCenter.default.addObserver(self, selector: #selector(notificationHandler), name:NSNotification.Name("StopTimer"), object: nil)
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -33,38 +34,15 @@ class PieChartViewController: UIViewController {
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "StopTimer"), object: nil)
-        self.stopTimer()
     }
+    
     @IBAction func clickedActionStop(_ sender: Any) {
-        chartView.stopRotating()
-        self.stopTimer()
-        animating = false
+        
     }
     @IBAction func clickedActionStart(_ sender: Any) {
-        var duration = 1.0
-        self.stopTimer()
-        self.timer = Timer.scheduledTimer(withTimeInterval: duration, repeats: true) { (timer: Timer) in
-            self.chartView.rotate(duration: duration)
-            duration += duration
-            if duration > 5 {
-                self.stopTimer()
-                self.chartView.aniStartAngle = self.chartView.aniEndAngle
-//                self.chartView.stopRotating()
-            }
-        }
+        chartView.startRotation(angle:Double.pi * 21 + .pi / 4.0)
     }
     
-    func stopTimer() {
-        if self.timer != nil {
-            self.timer?.invalidate()
-            self.timer?.fire()
-            self.timer = nil
-        }
-    }
-    
-    //MARK:: NotificationHandler
-    @objc func notificationHandler(_ notification: NSNotification) {
-        self.stopTimer()
-    }
 }
+
+

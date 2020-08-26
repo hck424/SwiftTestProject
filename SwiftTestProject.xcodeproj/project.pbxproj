@@ -18,6 +18,7 @@
 		E97CC47324F3548D0031B592 /* PieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97CC47224F3548D0031B592 /* PieChartViewController.swift */; };
 		E97CC47524F3558A0031B592 /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97CC47424F3558A0031B592 /* PieChartView.swift */; };
 		E97CC47724F355920031B592 /* PieChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E97CC47624F355920031B592 /* PieChartView.xib */; };
+		E97D740324F65C3500C0FF11 /* Closing-Box-Cutter.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E97D740224F65C3500C0FF11 /* Closing-Box-Cutter.mp3 */; };
 		E9E5203F24B6EBF700C175A7 /* NfcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E5203E24B6EBF700C175A7 /* NfcViewController.swift */; };
 		E9FDD1AB24B30DF900F06C8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDD1AA24B30DF900F06C8E /* AppDelegate.swift */; };
 		E9FDD1AD24B30DF900F06C8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDD1AC24B30DF900F06C8E /* SceneDelegate.swift */; };
@@ -51,6 +52,7 @@
 		E97CC47224F3548D0031B592 /* PieChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartViewController.swift; sourceTree = "<group>"; };
 		E97CC47424F3558A0031B592 /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
 		E97CC47624F355920031B592 /* PieChartView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PieChartView.xib; sourceTree = "<group>"; };
+		E97D740224F65C3500C0FF11 /* Closing-Box-Cutter.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Closing-Box-Cutter.mp3"; sourceTree = "<group>"; };
 		E9E5203D24B6EA2700C175A7 /* SwiftTestProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftTestProject.entitlements; sourceTree = "<group>"; };
 		E9E5203E24B6EBF700C175A7 /* NfcViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NfcViewController.swift; sourceTree = "<group>"; };
 		E9FDD1A724B30DF900F06C8E /* SwiftTestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +164,7 @@
 				E9FDD1CD24B30E6A00F06C8E /* Main.storyboard */,
 				E9FDD1A924B30DF900F06C8E /* SwiftTestProject */,
 				E9FDD1A824B30DF900F06C8E /* Products */,
+				E97D740224F65C3500C0FF11 /* Closing-Box-Cutter.mp3 */,
 				ACE0D10C8E6393F32262019A /* Pods */,
 				42D47247AD4CE9D0DE66C9F3 /* Frameworks */,
 			);
@@ -281,6 +284,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E97D740324F65C3500C0FF11 /* Closing-Box-Cutter.mp3 in Resources */,
 				E97CC47724F355920031B592 /* PieChartView.xib in Resources */,
 				E9FDD1D224B30F3000F06C8E /* Localizable.strings in Resources */,
 				E9FDD1B724B30DFB00F06C8E /* LaunchScreen.storyboard in Resources */,

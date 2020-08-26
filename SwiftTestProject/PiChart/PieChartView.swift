@@ -9,7 +9,9 @@
 import UIKit
 import QuartzCore
 
-class PieChartView: UIView {
+class PieChartView: UIView, CAAnimationDelegate {
+    var canSpin: Bool = true
+    var saveAngle: Double = 0.0
     
     var polygon:Int = 8
     var aniStartAngle:Float = 0.0
@@ -76,29 +78,46 @@ class PieChartView: UIView {
         path.fill()
         self.setNeedsDisplay()
     }
-    
-    func rotate(duration: Double = 1) {
-        if layer.animation(forKey: kRotationAnimationKey) != nil {
-            layer.removeAnimation(forKey: kRotationAnimationKey)
+    func startRotation(angle:Double = Double.pi * 21 + .pi / 4.0) {
+        if !canSpin {
+            return
         }
-
-        if layer.animation(forKey: kRotationAnimationKey) == nil {
-            let animation = CABasicAnimation(keyPath: "transform.rotation")
-            animation.fromValue = aniStartAngle
-            aniEndAngle = aniStartAngle + Float.pi*2*Float(5-duration)
-            animation.toValue = aniEndAngle
-            animation.duration = duration
-            animation.isCumulative = true
-            animation.repeatCount = 1
-            animation.isRemovedOnCompletion = false
-            animation.fillMode = .forwards
-            layer.add(animation, forKey: kRotationAnimationKey)
+        self.canSpin = false
+        
+        let rotate = CABasicAnimation(keyPath: "transform.rotation.z")
+        rotate.fromValue = saveAngle
+        let toValue = saveAngle + angle
+        rotate.duration = 5
+        rotate.isRemovedOnCompletion = false
+        rotate.fillMode = CAMediaTimingFillMode.forwards
+        rotate.toValue = toValue
+        rotate.timingFunction = CAMediaTimingFunction(name: .easeOut)//CAMediaTimingFunction(controlPoints: 0.0, 1.0, 1.0, 1)
+        rotate.delegate = self
+        
+        self.layer.transform = CATransform3DMakeRotation(CGFloat(toValue), 0, 0, 1)
+        self.layer.add(rotate, forKey: kRotationAnimationKey)
+    }
+    
+    
+    func animationDidStart(_ anim: CAAnimation) {
+        self.canSpin = false
+        print(anim.timeOffset)
+    }
+    
+    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+        self.canSpin = true
+        if let animation: CABasicAnimation = anim as? CABasicAnimation {
+            print(animation.toValue as Any)
+            saveAngle = animation.toValue as! Double
         }
     }
-
+    
     func stopRotating() {
         if layer.animation(forKey: kRotationAnimationKey) != nil {
+            let transform = layer.presentation()?.transform
+            layer.transform = transform!
             layer.removeAnimation(forKey: kRotationAnimationKey)
+            
         }
     }
 }
