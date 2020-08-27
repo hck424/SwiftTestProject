@@ -20,7 +20,7 @@ func imageFromColor(color: UIColor) -> UIImage {
 }
 
 class CButton: UIButton {
-    
+    public var data: Any?
     @IBInspectable var localizeText: String? {
         didSet {
             if localizeText != nil { setNeedsLayout()}

@@ -8,8 +8,9 @@
 
 import UIKit
 
-class PieChartViewController: UIViewController {
+class PieChartViewController: UIViewController, PieChartViewDelegate {
     
+    @IBOutlet weak var indicatorView: UIView!
     @IBOutlet weak var chartView: PieChartView!
     var saveAngle: Double = 0.0
     
@@ -18,6 +19,8 @@ class PieChartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.layoutIfNeeded()
+        //        chartView.polygon = 3
+        chartView.delegate = self
         
     }
     override func prepareForInterfaceBuilder() {
@@ -31,6 +34,7 @@ class PieChartViewController: UIViewController {
         self.view.layoutIfNeeded()
         chartView.setNeedsLayout()
         chartView.setNeedsDisplay()
+        
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -40,9 +44,11 @@ class PieChartViewController: UIViewController {
         
     }
     @IBAction func clickedActionStart(_ sender: Any) {
-        chartView.startRotation(angle:Double.pi * 21 + .pi / 4.0)
+        //        self.chartView.startRotation(angle:Double.pi * 21 + .pi / 4.0)
     }
-    
-}
 
+    func piechartViewRotationFinish() {
+        
+    }
+}
 

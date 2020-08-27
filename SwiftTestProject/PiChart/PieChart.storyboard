@@ -22,6 +22,13 @@
                                     <constraint firstAttribute="width" secondItem="KgE-6C-Hwh" secondAttribute="height" multiplier="1:1" id="1gw-wn-IFc"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eTD-41-kmr">
+                                <rect key="frame" x="206" y="144" width="2" height="165.5"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="2" id="ieH-Qy-NrN"/>
+                                </constraints>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QdE-Th-F0o">
                                 <rect key="frame" x="41.5" y="575" width="331" height="45"/>
                                 <subviews>
@@ -51,15 +58,19 @@
                         <constraints>
                             <constraint firstItem="KgE-6C-Hwh" firstAttribute="top" secondItem="H3x-H7-P5Z" secondAttribute="top" constant="100" id="08R-mL-4SM"/>
                             <constraint firstItem="KgE-6C-Hwh" firstAttribute="centerX" secondItem="H3x-H7-P5Z" secondAttribute="centerX" id="KLd-lE-3bE"/>
+                            <constraint firstItem="eTD-41-kmr" firstAttribute="top" secondItem="KgE-6C-Hwh" secondAttribute="top" id="N6f-po-jln"/>
+                            <constraint firstItem="eTD-41-kmr" firstAttribute="centerX" secondItem="KgE-6C-Hwh" secondAttribute="centerX" id="bNp-tl-Na2"/>
                             <constraint firstItem="KgE-6C-Hwh" firstAttribute="width" secondItem="F1F-NT-OrO" secondAttribute="width" multiplier="0.8" id="gVA-Tl-dNM"/>
                             <constraint firstItem="QdE-Th-F0o" firstAttribute="width" secondItem="KgE-6C-Hwh" secondAttribute="width" id="hPq-9S-fno"/>
                             <constraint firstItem="QdE-Th-F0o" firstAttribute="top" secondItem="KgE-6C-Hwh" secondAttribute="bottom" constant="100" id="k56-G9-qbp"/>
                             <constraint firstItem="QdE-Th-F0o" firstAttribute="centerX" secondItem="KgE-6C-Hwh" secondAttribute="centerX" id="tbi-nl-1Jz"/>
+                            <constraint firstItem="eTD-41-kmr" firstAttribute="height" secondItem="KgE-6C-Hwh" secondAttribute="height" multiplier="1/2" id="wQZ-kk-pOv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="H3x-H7-P5Z"/>
                     </view>
                     <connections>
                         <outlet property="chartView" destination="KgE-6C-Hwh" id="NnS-px-Pp1"/>
+                        <outlet property="indicatorView" destination="eTD-41-kmr" id="x3J-6d-drf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kkX-Z9-Bst" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
